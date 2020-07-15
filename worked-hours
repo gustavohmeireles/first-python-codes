@@ -1,0 +1,18 @@
+"""Calculo de hora trabalhada, hora extra e salario extra de trabalhador"""
+# Entradas
+cod_trabalhador = input("Digite o código do trabalhador:  ")
+hrs_trabalhadas = int(input("Digite a quantidade de horas trabalhadas:  "))
+# Processamento
+salario = hrs_trabalhadas * 10
+if hrs_trabalhadas < 50:
+    excedente = 0
+    # Saída 01
+    print("O salário é {0} reais ".format(salario))
+    print('O trabalhador {0} não possui horas extras  '.format(cod_trabalhador))
+elif hrs_trabalhadas >= 50:
+    excedente = (hrs_trabalhadas - 50) * 20
+    total = 500 + excedente
+    # Saída 02
+    print("O trabalhador {0} possui {1} horas trabalhadas ".format(cod_trabalhador, hrs_trabalhadas))
+    print("O salário base é 500 reais, e o salário excedente é {0} ".format(excedente))
+    print(" O recebimento total do {0} é {1} reais".format(cod_trabalhador, total))
