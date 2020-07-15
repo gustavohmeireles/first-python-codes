@@ -1,0 +1,8 @@
+"""Programa para calcular Estoque médio de uma loja genérica"""
+# Entrada
+qntd_minima = int(input("Digite a quantidade mínima de peças: "))
+qndt_maxima = int(input("Digite a quantidade máxima de peças: "))
+# Processamento
+estoque_medio = (qndt_maxima + qntd_minima) / 2
+# Saída 1
+print("O estoque médio de peças é {0:.0f}".format(estoque_medio))
