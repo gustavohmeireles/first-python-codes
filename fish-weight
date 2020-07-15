@@ -1,0 +1,18 @@
+"""Calculo de peso do Peixe"""
+# Entrada
+peso_peixe = float(input("Digite o peso do Peixe em quilos:  "))
+# Processamento
+if peso_peixe <= 0:
+# Saída 1
+    print("Digite valor positivo para o peso  ")
+elif peso_peixe < 50:
+# Saída 2
+    print("O peso do peixe está dentro do limite {0:.2f} quilos".format(peso_peixe))
+else:
+    excedente = peso_peixe - 50
+    multa = excedente * 4
+# Saída 3
+    print("O peso do peixe é {0:.4f} quilos  ".format(peso_peixe))
+    print("O peso excedente é {0:.4f} quilo(s)  ".format(excedente))
+    print("O valor da multa é {0:.2f} reais  ".format(multa))
+
