@@ -1,0 +1,16 @@
+"""Calculo de peso ideal de Homem e Mulher"""
+# Entrada
+sexo = input("Digite se é Homem (M), ou Mulher (F):  ")
+altura = float(input("Digite a altura:  "))
+# Processamento
+if sexo.lower() == 'm':
+    peso_ideal = (72.7 * altura) - 58
+elif sexo.lower() == 'f':
+    peso_ideal = (62.1 * altura) - 44.7
+else:
+    peso_ideal = 0
+# Saída 1
+    print("Sexo não reconhecido")
+# Saída 2
+print("Seu peso ideal é {0:.2f}".format(peso_ideal))
+
