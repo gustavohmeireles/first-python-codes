@@ -1,0 +1,41 @@
+"""Programa para contagem de defeitos de mouse - UTILIZANDO RANGE
+aula aprendida na geek university """
+# Variáveis
+contador_sit_01 = 0
+contador_sit_02 = 0
+contador_sit_03 = 0
+contador_sit_04 = 0
+contador_total_mouses = 0
+# Entradas
+identificador_mouse = 0
+# Entradas/Processamento
+for identificador_mouse in range(1, 201):
+    print(f"Qual o defeito do mouse n° {identificador_mouse}: ")
+    print("1 - Necessidade de Esfera ")
+    print("2 - Necessidade de Limpeza ")
+    print("3 - Necessidade de Troca do Cabo ou Conector ")
+    print("4 - Quebrado ou inutilizado ")
+    defeito = int(input("Informe o defeito encontrado: "))
+# Processamento de contagem dos defeitos
+    if defeito == 1:
+        contador_sit_01 = contador_sit_01 + 1
+    elif defeito == 2:
+        contador_sit_02 = contador_sit_02 + 1
+    elif defeito == 3:
+        contador_sit_03 = contador_sit_03 + 1
+    elif defeito == 4:
+        contador_sit_04 = contador_sit_04 + 1
+    contador_total_mouses = contador_total_mouses + 1
+# Calculo para porcentagem
+p1 = contador_sit_01 / contador_total_mouses * 100
+p2 = contador_sit_02 / contador_total_mouses * 100
+p3 = contador_sit_03 / contador_total_mouses * 100
+p4 = contador_sit_04 / contador_total_mouses * 100
+# Saídas
+print(f"Quantidade de mouses: {contador_total_mouses}")
+print("Situação                                        Quantidade       Percentual")
+print("1 - Necessidade de Esfera                          {0}             {1:.2f}".format(contador_sit_01, p1))
+print("2 - Necessidade de Limpeza                         {0}             {1:.2f} ".format(contador_sit_02, p2))
+print("3 - Necessidade de Troca do Cabo ou Conector       {0}             {1:.2f}".format(contador_sit_03, p3))
+print("4 - Quebrado ou inutilizado                        {0}             {1:.2f} ".format(contador_sit_04, p4))
+
